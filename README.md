@@ -1,2 +1,2 @@
-# qwit-desktop
-the desktop version for qwitqwit
+# Qwit desktop
+The qwit application for the desktop
