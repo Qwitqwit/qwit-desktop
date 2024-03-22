@@ -3,32 +3,24 @@ set dotenv-load
 @_list:
     just --list --unsorted
 
-[windows]
+
 install:
+    npm install
     npm ci
 
-[linux]
-install:
-    bun install
-    bun install --frozen-lockfile
 
-[windows]
 run-m *args:
     npm {{args}}
 
-[linux]
-run-m *args:
-    bun {{args}}
-
 # Perform all verifications (compile, test, lint, etc.)
-verify: install lint
+verify: install lint test
     just run-m run build
 
 test:
     just backend test
 
 run: install
-    bun run tauri dev
+    npm run tauri dev
 
 
 lint:
@@ -39,7 +31,7 @@ build:
     cargo tauri build
 
 fmt:
-    bun run format
+    npm run format
 
 backend *args:
     cd src-tauri && just {{args}}
@@ -48,3 +40,9 @@ backend *args:
 install-dev:
   npm add prettier
 
+
+
+release *args: verify
+    test $GITHUB_TOKEN
+    test $CARGO_REGISTRY_TOKEN
+    cargo release {{args}}
