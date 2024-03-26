@@ -2,7 +2,11 @@
 name = "qwit"
 version = "0.0.0"
 description = "A Tauri App"
-authors = ["you"]
+authors = ["silen"]
+license = "MIT"
+documentation = "https://github.com/Qwitqwit/qwit-desktop"
+homepage = "https://github.com/Qwitqwit/qwit-desktop"
+repository = "https://github.com/Qwitqwit/qwit-desktop"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

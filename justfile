@@ -46,4 +46,4 @@ install-dev:
 release *args: verify
     test $GITHUB_TOKEN
     test $CARGO_REGISTRY_TOKEN
-    cargo release {{args}}
+    cd src-tauri && cargo release {{args}}
