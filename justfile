@@ -13,7 +13,10 @@ run-m *args:
     npm {{args}}
 
 # Perform all verifications (compile, test, lint, etc.)
-verify: install lint test
+verify: install build lint test
+
+
+build:
     just run-m run build
 
 test:
@@ -27,8 +30,6 @@ lint:
     just run-m run lint
     just run-m run format-check
 
-build:
-    cargo tauri build
 
 fmt:
     npm run format
