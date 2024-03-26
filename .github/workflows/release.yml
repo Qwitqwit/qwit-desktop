@@ -43,9 +43,9 @@ jobs:
       - name: Install Tauri cli
         run: npm install --save-dev @tauri-apps/cli
 
-      - name: Install frontend dependencies
+      - name: remove lock and install frontend dependencies
         # If you don't have `beforeBuildCommand` configured you may want to build your frontend here too.
-        run: npm install # Change this to npm, yarn or pnpm.
+        run: npm i --force # Change this to npm, yarn or pnpm.
 
       - name: Build the app
         uses: tauri-apps/tauri-action@v0
