@@ -31,8 +31,11 @@ lint:
     just run-m run format-check
 
 
-fmt:
+fmt: fmt-b
     npm run format
+
+fmt-b:
+    just backend fmt
 
 backend *args:
     cd src-tauri && just {{args}}

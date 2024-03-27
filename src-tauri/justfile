@@ -28,3 +28,6 @@ test:
 lint:
     cargo fmt --all -- --check
     cargo hack clippy --feature-powerset --all-targets --workspace
+
+fmt:
+    cargo fmt
