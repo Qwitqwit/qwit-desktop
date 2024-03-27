@@ -40,6 +40,16 @@ jobs:
           node-version: 'lts/*'
           cache: 'npm' # Set this to npm, yarn or pnpm.
 
+      - name: remove node mod on mac
+        if: matrix.platform == 'macos-latest'
+        # You can remove libayatana-appindicator3-dev if you don't use the system tray feature.
+        run: rm -rf node_modules/
+
+      - name: remove node mod on windows
+        if: matrix.platform == 'windows-latest'
+        # You can remove libayatana-appindicator3-dev if you don't use the system tray feature.
+        run: rmdir node_modules /s /q
+
       - name: Install Tauri cli
         run: npm install --save-dev @tauri-apps/cli
 
