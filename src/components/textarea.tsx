@@ -28,7 +28,7 @@ export const Textarea = forwardRef<
         "after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:ring-inset after:ring-transparent sm:after:focus-within:ring-2 sm:after:focus-within:ring-blue-500",
 
         // Disabled state
-        "has-[[data-disabled]]:opacity-50 before:has-[[data-disabled]]:bg-teal/5 before:has-[[data-disabled]]:shadow-none",
+        "has-[[data-disabled]]:opacity-50 before:has-[[data-disabled]]:bg-bcb/5 before:has-[[data-disabled]]:shadow-none",
       ])}
     >
       <HeadlessTextarea
@@ -38,13 +38,13 @@ export const Textarea = forwardRef<
           "relative block h-full w-full appearance-none rounded-lg px-[calc(theme(spacing[3.5])-1px)] py-[calc(theme(spacing[2.5])-1px)] sm:px-[calc(theme(spacing.3)-1px)] sm:py-[calc(theme(spacing[1.5])-1px)]",
 
           // Typography
-          "text-base/6 text-teal placeholder:text-teal sm:text-sm/6 dark:text-mint",
+          "text-base/6 text-bcb placeholder:text-bcb sm:text-sm/6 dark:text-tc",
 
           // Border
-          "border border-teal/10 data-[hover]:border-teal/20 dark:border-mint dark:data-[hover]:border-mint0",
+          "border border-bcb/10 data-[hover]:border-bcb/20 dark:border-tc dark:data-[hover]:border-tc0",
 
           // Background color
-          "bg-transparent dark:bg-mint",
+          "bg-transparent dark:bg-tc",
 
           // Hide default focus styles
           "focus:outline-none",
@@ -53,7 +53,7 @@ export const Textarea = forwardRef<
           "data-[invalid]:border-red-500 data-[invalid]:data-[hover]:border-red-500 data-[invalid]:dark:border-red-600 data-[invalid]:data-[hover]:dark:border-red-600",
 
           // Disabled state
-          "disabled:border-teal/20 disabled:dark:border-mint disabled:dark:bg-mint dark:data-[hover]:disabled:border-mint",
+          "disabled:border-bcb/20 disabled:dark:border-tc disabled:dark:bg-tc dark:data-[hover]:disabled:border-tc",
 
           // Resizable
           resizable ? "resize-y" : "resize-none",

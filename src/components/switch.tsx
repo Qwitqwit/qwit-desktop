@@ -57,8 +57,8 @@ export function SwitchField({ className, ...props }: HeadlessFieldProps) {
 
 const colors = {
   zinc: [
-    "[--switch-bg-ring:theme(colors.teal/90%)] [--switch-bg:theme(colors.teal)] dark:[--switch-bg-ring:transparent]",
-    "[--switch-shadow:theme(colors.black/10%)] [--switch:white] [--switch-ring:theme(colors.teal/90%)]",
+    "[--switch-bg-ring:theme(colors.bcb/90%)] [--switch-bg:theme(colors.bcb)] dark:[--switch-bg-ring:transparent]",
+    "[--switch-shadow:theme(colors.black/10%)] [--switch:white] [--switch-ring:theme(colors.bcb/90%)]",
   ],
 };
 
@@ -90,7 +90,7 @@ export function Switch({
         "forced-colors:outline forced-colors:[--switch-bg:Highlight] dark:forced-colors:[--switch-bg:Highlight]",
 
         // Unchecked
-        "bg-teal ring-1 ring-inset ring-black/5 dark:bg-mint dark:ring-mint",
+        "bg-bcb ring-1 ring-inset ring-black/5 dark:bg-tc dark:ring-tc",
 
         // Checked
         "data-[checked]:bg-[--switch-bg] data-[checked]:ring-[--switch-bg-ring] dark:data-[checked]:bg-[--switch-bg] dark:data-[checked]:ring-[--switch-bg-ring]",
@@ -100,11 +100,11 @@ export function Switch({
 
         // Hover
         "data-[hover]:data-[checked]:ring-[--switch-bg-ring] data-[hover]:ring-black/15",
-        "dark:data-[hover]:data-[checked]:ring-[--switch-bg-ring] dark:data-[hover]:ring-mint5",
+        "dark:data-[hover]:data-[checked]:ring-[--switch-bg-ring] dark:data-[hover]:ring-tc5",
 
         // Disabled
-        "data-[disabled]:bg-teal data-[disabled]:data-[checked]:bg-teal data-[disabled]:opacity-50 data-[disabled]:data-[checked]:ring-black/5",
-        "dark:data-[disabled]:bg-mint dark:data-[disabled]:data-[checked]:bg-mint dark:data-[disabled]:data-[checked]:ring-mint",
+        "data-[disabled]:bg-bcb data-[disabled]:data-[checked]:bg-bcb data-[disabled]:opacity-50 data-[disabled]:data-[checked]:ring-black/5",
+        "dark:data-[disabled]:bg-tc dark:data-[disabled]:data-[checked]:bg-tc dark:data-[disabled]:data-[checked]:ring-tc",
 
         // Color specific styles
         colors[color],

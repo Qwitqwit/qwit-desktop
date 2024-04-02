@@ -40,13 +40,13 @@ const styles = {
     "dark:before:hidden",
 
     // Dark mode: Subtle white outline is applied using a border
-    "dark:border-mint",
+    "dark:border-tc",
 
     // Shim/overlay, inset to match button foreground and used for hover state + highlight shadow
     "after:absolute after:inset-0 after:-z-10 after:rounded-[calc(theme(borderRadius.lg)-1px)]",
 
     // Inner highlight shadow
-    "after:shadow-[shadow:inset_0_1px_theme(colors.mint)]",
+    "after:shadow-[shadow:inset_0_1px_theme(colors.tc)]",
 
     // White overlay on hover
     "after:data-[active]:bg-[--btn-hover-overlay] after:data-[hover]:bg-[--btn-hover-overlay]",
@@ -59,29 +59,29 @@ const styles = {
   ],
   outline: [
     // Base
-    "border-teal/10 text-teal data-[active]:bg-teal/[2.5%] data-[hover]:bg-teal/[2.5%]",
+    "border-bcb/10 text-bcb data-[active]:bg-bcb/[2.5%] data-[hover]:bg-bcb/[2.5%]",
 
     // Dark mode
-    "dark:border-mint dark:text-mint dark:[--btn-bg:transparent] dark:data-[active]:bg-mint dark:data-[hover]:bg-mint",
+    "dark:border-tc dark:text-tc dark:[--btn-bg:transparent] dark:data-[active]:bg-tc dark:data-[hover]:bg-tc",
 
     // Icon
-    "[--btn-icon:theme(colors.teal)] data-[active]:[--btn-icon:theme(colors.teal)] data-[hover]:[--btn-icon:theme(colors.teal)] dark:data-[active]:[--btn-icon:theme(colors.teal)] dark:data-[hover]:[--btn-icon:theme(colors.teal)]",
+    "[--btn-icon:theme(colors.bcb)] data-[active]:[--btn-icon:theme(colors.bcb)] data-[hover]:[--btn-icon:theme(colors.bcb)] dark:data-[active]:[--btn-icon:theme(colors.bcb)] dark:data-[hover]:[--btn-icon:theme(colors.bcb)]",
   ],
   plain: [
     // Base
-    "border-transparent text-teal data-[active]:bg-teal/5 data-[hover]:bg-teal/5",
+    "border-transparent text-bcb data-[active]:bg-bcb/5 data-[hover]:bg-bcb/5",
 
     // Dark mode
-    "dark:text-mint dark:data-[active]:bg-mint dark:data-[hover]:bg-mint",
+    "dark:text-tc dark:data-[active]:bg-tc dark:data-[hover]:bg-tc",
 
     // Icon
-    "[--btn-icon:theme(colors.teal)] data-[active]:[--btn-icon:theme(colors.teal)] data-[hover]:[--btn-icon:theme(colors.teal)] dark:[--btn-icon:theme(colors.teal)] dark:data-[active]:[--btn-icon:theme(colors.teal)] dark:data-[hover]:[--btn-icon:theme(colors.teal)]",
+    "[--btn-icon:theme(colors.bcb)] data-[active]:[--btn-icon:theme(colors.bcb)] data-[hover]:[--btn-icon:theme(colors.bcb)] dark:[--btn-icon:theme(colors.bcb)] dark:data-[active]:[--btn-icon:theme(colors.bcb)] dark:data-[hover]:[--btn-icon:theme(colors.bcb)]",
   ],
   colors: {
     zinc: [
-      "text-mint [--btn-hover-overlay:theme(colors.mint)] [--btn-bg:theme(colors.teal)] [--btn-border:theme(colors.teal/90%)]",
-      "dark:[--btn-hover-overlay:theme(colors.mint)]",
-      "[--btn-icon:theme(colors.teal)] data-[active]:[--btn-icon:theme(colors.teal)] data-[hover]:[--btn-icon:theme(colors.teal)]",
+      "text-tc [--btn-hover-overlay:theme(colors.tc)] [--btn-bg:theme(colors.bcb)] [--btn-border:theme(colors.bcb/90%)]",
+      "dark:[--btn-hover-overlay:theme(colors.tc)]",
+      "[--btn-icon:theme(colors.bcb)] data-[active]:[--btn-icon:theme(colors.bcb)] data-[hover]:[--btn-icon:theme(colors.bcb)]",
     ],
   },
 };

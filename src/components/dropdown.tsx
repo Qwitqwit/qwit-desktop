@@ -73,10 +73,10 @@ export function DropdownMenu({
           "overflow-y-auto",
 
           // Popover background
-          "bg-mint backdrop-blur-xl dark:bg-teal",
+          "bg-tc backdrop-blur-xl dark:bg-bcb",
 
           // Shadows
-          "shadow-lg ring-1 ring-teal/10 dark:ring-inset dark:ring-mint",
+          "shadow-lg ring-1 ring-bcb/10 dark:ring-inset dark:ring-tc",
 
           // Define grid at the menu level if subgrid is supported
           "supports-[grid-template-columns:subgrid]:grid supports-[grid-template-columns:subgrid]:grid-cols-[auto_1fr_1.5rem_0.5rem_auto]",
@@ -101,10 +101,10 @@ export function DropdownItem(
         "group cursor-default rounded-lg px-3.5 py-2.5 focus:outline-none sm:px-3 sm:py-1.5",
 
         // Text styles
-        "text-left text-base/6 text-teal sm:text-sm/6 dark:text-mint forced-colors:text-[CanvasText]",
+        "text-left text-base/6 text-bcb sm:text-sm/6 dark:text-tc forced-colors:text-[CanvasText]",
 
         // Focus
-        "data-[focus]:bg-blue-500 data-[focus]:text-mint",
+        "data-[focus]:bg-blue-500 data-[focus]:text-tc",
 
         // Disabled state
         "data-[disabled]:opacity-50",
@@ -117,7 +117,7 @@ export function DropdownItem(
 
         // Icon
         "[&>[data-slot=icon]]:col-start-1 [&>[data-slot=icon]]:row-start-1 [&>[data-slot=icon]]:mr-2.5 [&>[data-slot=icon]]:size-5 sm:[&>[data-slot=icon]]:mr-2 [&>[data-slot=icon]]:sm:size-4",
-        "[&>[data-slot=icon]]:text-teal [&>[data-slot=icon]]:data-[focus]:text-mint [&>[data-slot=icon]]:dark:text-teal [&>[data-slot=icon]]:data-[focus]:dark:text-mint",
+        "[&>[data-slot=icon]]:text-bcb [&>[data-slot=icon]]:data-[focus]:text-tc [&>[data-slot=icon]]:dark:text-bcb [&>[data-slot=icon]]:data-[focus]:dark:text-tc",
       )}
     />
   );
@@ -160,7 +160,7 @@ export function DropdownHeading({
       {...props}
       className={clsx(
         className,
-        "col-span-full grid grid-cols-[1fr,auto] gap-x-12 px-3.5 pb-1 pt-2 text-sm/5 font-medium text-teal sm:px-3 sm:text-xs/5 dark:text-teal",
+        "col-span-full grid grid-cols-[1fr,auto] gap-x-12 px-3.5 pb-1 pt-2 text-sm/5 font-medium text-bcb sm:px-3 sm:text-xs/5 dark:text-bcb",
       )}
     />
   );
@@ -175,7 +175,7 @@ export function DropdownSeparator({
       {...props}
       className={clsx(
         className,
-        "col-span-full mx-3.5 my-1 h-px border-0 bg-teal/5 sm:mx-3 dark:bg-mint forced-colors:bg-[CanvasText]",
+        "col-span-full mx-3.5 my-1 h-px border-0 bg-bcb/5 sm:mx-3 dark:bg-tc forced-colors:bg-[CanvasText]",
       )}
     />
   );
@@ -202,7 +202,7 @@ export function DropdownDescription({
       {...props}
       className={clsx(
         className,
-        "col-span-2 col-start-2 row-start-2 text-sm/5 text-teal group-data-[focus]:text-mint sm:text-xs/5 dark:text-teal forced-colors:group-data-[focus]:text-[HighlightText]",
+        "col-span-2 col-start-2 row-start-2 text-sm/5 text-bcb group-data-[focus]:text-tc sm:text-xs/5 dark:text-bcb forced-colors:group-data-[focus]:text-[HighlightText]",
       )}
     />
   );
@@ -226,7 +226,7 @@ export function DropdownShortcut({
         <kbd
           key={index}
           className={clsx([
-            "min-w-[2ch] text-center font-sans capitalize text-teal group-data-[focus]:text-mint forced-colors:group-data-[focus]:text-[HighlightText]",
+            "min-w-[2ch] text-center font-sans capitalize text-bcb group-data-[focus]:text-tc forced-colors:group-data-[focus]:text-[HighlightText]",
 
             // Make sure key names that are longer than one character (like "Tab") have extra space
             index > 0 && char.length > 1 && "pl-1",

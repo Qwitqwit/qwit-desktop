@@ -66,7 +66,7 @@ export function TableHead({
   ...props
 }: React.ComponentPropsWithoutRef<"thead">) {
   return (
-    <thead className={clsx(className, "text-teal dark:text-teal")} {...props} />
+    <thead className={clsx(className, "text-bcb dark:text-bcb")} {...props} />
   );
 }
 
@@ -109,10 +109,10 @@ export function TableRow({
         className={clsx(
           className,
           href &&
-            "has-[[data-row-link][data-focus]]:outline has-[[data-row-link][data-focus]]:outline-2 has-[[data-row-link][data-focus]]:-outline-offset-2 has-[[data-row-link][data-focus]]:outline-blue-500 dark:focus-within:bg-mint",
-          striped && "even:bg-teal/[2.5%] dark:even:bg-mint",
-          href && striped && "hover:bg-teal/5 dark:hover:bg-mint",
-          href && !striped && "hover:bg-teal/[2.5%] dark:hover:bg-mint",
+            "has-[[data-row-link][data-focus]]:outline has-[[data-row-link][data-focus]]:outline-2 has-[[data-row-link][data-focus]]:-outline-offset-2 has-[[data-row-link][data-focus]]:outline-blue-500 dark:focus-within:bg-tc",
+          striped && "even:bg-bcb/[2.5%] dark:even:bg-tc",
+          href && striped && "hover:bg-bcb/5 dark:hover:bg-tc",
+          href && !striped && "hover:bg-bcb/[2.5%] dark:hover:bg-tc",
         )}
       >
         {children}
@@ -132,8 +132,8 @@ export function TableHeader({
       {...props}
       className={clsx(
         className,
-        "border-b border-b-teal/10 px-4 py-2 font-medium first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] dark:border-b-mint",
-        grid && "border-l border-l-teal/5 first:border-l-0 dark:border-l-mint",
+        "border-b border-b-bcb/10 px-4 py-2 font-medium first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] dark:border-b-tc",
+        grid && "border-l border-l-bcb/5 first:border-l-0 dark:border-l-tc",
         !bleed && "sm:first:pl-2 sm:last:pr-2",
       )}
     />
@@ -156,8 +156,8 @@ export function TableCell({
       className={clsx(
         className,
         "relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))]",
-        !striped && "border-b border-teal/5 dark:border-mint",
-        grid && "border-l border-l-teal/5 first:border-l-0 dark:border-l-mint",
+        !striped && "border-b border-bcb/5 dark:border-tc",
+        grid && "border-l border-l-bcb/5 first:border-l-0 dark:border-l-tc",
         dense ? "py-2.5" : "py-4",
         !bleed && "sm:first:pl-2 sm:last:pr-2",
       )}

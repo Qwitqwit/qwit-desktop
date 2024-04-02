@@ -26,7 +26,7 @@ export const Select = forwardRef<HTMLSelectElement, HeadlessSelectProps>(
           "after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:ring-inset after:ring-transparent sm:after:has-[[data-focus]]:ring-2 sm:after:has-[[data-focus]]:ring-blue-500",
 
           // Disabled state
-          "has-[[data-disabled]]:opacity-50 before:has-[[data-disabled]]:bg-teal/5 before:has-[[data-disabled]]:shadow-none",
+          "has-[[data-disabled]]:opacity-50 before:has-[[data-disabled]]:bg-bcb/5 before:has-[[data-disabled]]:shadow-none",
         ])}
       >
         <HeadlessSelect
@@ -46,13 +46,13 @@ export const Select = forwardRef<HTMLSelectElement, HeadlessSelectProps>(
             "[&_optgroup]:font-semibold",
 
             // Typography
-            "text-base/6 text-teal placeholder:text-teal sm:text-sm/6 dark:text-mint dark:*:text-mint",
+            "text-base/6 text-bcb placeholder:text-bcb sm:text-sm/6 dark:text-tc dark:*:text-tc",
 
             // Border
-            "border border-teal/10 data-[hover]:border-teal/20 dark:border-mint dark:data-[hover]:border-mint0",
+            "border border-bcb/10 data-[hover]:border-bcb/20 dark:border-tc dark:data-[hover]:border-tc0",
 
             // Background color
-            "bg-transparent dark:bg-mint dark:*:bg-teal",
+            "bg-transparent dark:bg-tc dark:*:bg-bcb",
 
             // Hide default focus styles
             "focus:outline-none",
@@ -61,13 +61,13 @@ export const Select = forwardRef<HTMLSelectElement, HeadlessSelectProps>(
             "data-[invalid]:border-red-500 data-[invalid]:data-[hover]:border-red-500 data-[invalid]:dark:border-red-600 data-[invalid]:data-[hover]:dark:border-red-600",
 
             // Disabled state
-            "data-[disabled]:border-teal/20 data-[disabled]:opacity-100 dark:data-[hover]:data-[disabled]:border-mint data-[disabled]:dark:border-mint data-[disabled]:dark:bg-mint",
+            "data-[disabled]:border-bcb/20 data-[disabled]:opacity-100 dark:data-[hover]:data-[disabled]:border-tc data-[disabled]:dark:border-tc data-[disabled]:dark:bg-tc",
           ])}
         />
         {!multiple && (
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <svg
-              className="size-5 stroke-teal group-has-[[data-disabled]]:stroke-teal sm:size-4 dark:stroke-teal forced-colors:stroke-[CanvasText]"
+              className="size-5 stroke-bcb group-has-[[data-disabled]]:stroke-bcb sm:size-4 dark:stroke-bcb forced-colors:stroke-[CanvasText]"
               viewBox="0 0 16 16"
               aria-hidden="true"
               fill="none"

@@ -11,7 +11,7 @@ export function Text({
       data-slot="text"
       className={clsx(
         className,
-        "text-base/6 text-teal sm:text-sm/6 dark:text-teal",
+        "text-base/6 text-bcb sm:text-sm/6 dark:text-bcb",
       )}
     />
   );
@@ -26,7 +26,7 @@ export function TextLink({
       {...props}
       className={clsx(
         className,
-        "text-teal underline decoration-teal/50 data-[hover]:decoration-teal dark:text-mint dark:decoration-mint dark:data-[hover]:decoration-white",
+        "text-bcb underline decoration-bcb/50 data-[hover]:decoration-bcb dark:text-tc dark:decoration-tc dark:data-[hover]:decoration-white",
       )}
     />
   );
@@ -39,7 +39,7 @@ export function Strong({
   return (
     <strong
       {...props}
-      className={clsx(className, "font-medium text-teal dark:text-mint")}
+      className={clsx(className, "font-medium text-bcb dark:text-tc")}
     />
   );
 }
@@ -53,7 +53,7 @@ export function Code({
       {...props}
       className={clsx(
         className,
-        "rounded border border-teal/10 bg-teal/[2.5%] px-0.5 text-sm font-medium text-teal sm:text-[0.8125rem] dark:border-mint0 dark:bg-mint dark:text-mint",
+        "rounded border border-bcb/10 bg-bcb/[2.5%] px-0.5 text-sm font-medium text-bcb sm:text-[0.8125rem] dark:border-tc0 dark:bg-tc dark:text-tc",
       )}
     />
   );
