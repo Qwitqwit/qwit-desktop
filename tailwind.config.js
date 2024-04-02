@@ -6,7 +6,7 @@ export default {
       tc: "#D1E8E2",
       tcb: "#000000",
       bc: "#D1E8E2",
-      bcb:"#000000",
+      bcb: "#000000",
     },
   },
   plugins: [],
