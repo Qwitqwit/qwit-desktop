@@ -5,13 +5,7 @@ export function Text({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"p">) {
-  return (
-    <p
-      {...props}
-      data-slot="text"
-      className={clsx(className, "text-bcb block")}
-    />
-  );
+  return <p {...props} className={clsx(className, "text-bcb")} />;
 }
 
 export function TextLink({

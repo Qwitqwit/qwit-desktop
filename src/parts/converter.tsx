@@ -2,10 +2,19 @@ import { Text } from "../components/text.tsx";
 import { Button } from "../components/button.tsx";
 import { useState } from "react";
 import { open, save } from "@tauri-apps/plugin-dialog";
+import { invoke } from "@tauri-apps/api/core";
 
 function Converter() {
   const [sourceFileName, setSourceFileName] = useState("");
+  const [sourcePath, setSourcePath] = useState("");
   const [targetPath, setTargetPath] = useState("");
+  const [res, setRes] = useState("");
+
+  async function convert() {
+    await invoke("convert", { source: sourcePath, target: targetPath }).then(
+      (message) => setRes((message as string) ?? ""),
+    );
+  }
 
   async function openDialog(): Promise<void> {
     const file = await open({
@@ -19,9 +28,9 @@ function Converter() {
       ],
     });
     if (file) {
+      setSourcePath(file.path);
       setSourceFileName(file.name ?? "no name");
     }
-    console.log(file?.path);
   }
 
   async function saveDialog(): Promise<void> {
@@ -52,6 +61,9 @@ function Converter() {
           <Button onClick={saveDialog}>Choose target path</Button>
         </div>
       </div>
+
+      <Text className="text-tc">Result: {res}</Text>
+      <Button onClick={convert}>Convert</Button>
     </div>
   );
 }
