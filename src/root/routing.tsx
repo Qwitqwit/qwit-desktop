@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
   NavLink,
+  redirect,
 } from "react-router-dom";
 import Settings from "../parts/settings.tsx";
 import Home from "../parts/home.tsx";
@@ -68,6 +69,7 @@ class Routing extends Component {
             })}
           </ul>
           <Routes>
+            <Route path="/" element={<RedirectToHome />}></Route>
             {navigation.map((p) => {
               return (
                 <>
@@ -83,3 +85,8 @@ class Routing extends Component {
 }
 
 export default Routing;
+
+function RedirectToHome() {
+  redirect("/home");
+  return null;
+}

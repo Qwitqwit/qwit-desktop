@@ -78,11 +78,7 @@ const styles = {
     "[--btn-icon:theme(colors.bcb)] data-[active]:[--btn-icon:theme(colors.bcb)] data-[hover]:[--btn-icon:theme(colors.bcb)] dark:[--btn-icon:theme(colors.bcb)] dark:data-[active]:[--btn-icon:theme(colors.bcb)] dark:data-[hover]:[--btn-icon:theme(colors.bcb)]",
   ],
   colors: {
-    zinc: [
-      "text-tc [--btn-hover-overlay:theme(colors.tc)] [--btn-bg:theme(colors.bcb)] [--btn-border:theme(colors.bcb/90%)]",
-      "dark:[--btn-hover-overlay:theme(colors.tc)]",
-      "[--btn-icon:theme(colors.bcb)] data-[active]:[--btn-icon:theme(colors.bcb)] data-[hover]:[--btn-icon:theme(colors.bcb)]",
-    ],
+    zinc: ["text-tc bg-bcb hover:text-tcb hover:bg-bc", ""],
   },
 };
 
@@ -134,7 +130,7 @@ export function TouchTarget({ children }: { children: React.ReactNode }) {
     <>
       {children}
       <span
-        className="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 [@media(pointer:fine)]:hidden"
+        className="absolute left-1/2 top-1/2 size-[max(100%,2.75rem)] -translate-x-1/2 -translate-y-1/2 cursor-pointer"
         aria-hidden="true"
       />
     </>

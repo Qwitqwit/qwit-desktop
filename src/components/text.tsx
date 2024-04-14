@@ -9,10 +9,7 @@ export function Text({
     <p
       {...props}
       data-slot="text"
-      className={clsx(
-        className,
-        "text-base/6 text-bcb sm:text-sm/6 dark:text-bcb",
-      )}
+      className={clsx(className, "text-bcb block")}
     />
   );
 }
