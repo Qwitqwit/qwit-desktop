@@ -6,10 +6,10 @@ import {
   redirect,
 } from "react-router-dom";
 import Settings from "../parts/settings.tsx";
-import Home from "../parts/home.tsx";
 import "./../index.css";
 import { Component, ReactElement } from "react";
 import Converter from "../parts/converter.tsx";
+import { Text } from "../components/text.tsx";
 
 interface Part {
   component: ReactElement<unknown, string>;
@@ -17,11 +17,6 @@ interface Part {
   title: string;
 }
 const navigation: Part[] = [
-  {
-    component: <Home />,
-    link: "/home",
-    title: "Home",
-  },
   {
     component: <Converter />,
     link: "/converter",
@@ -43,11 +38,12 @@ class Routing extends Component {
     return (
       <Router>
         <div className="">
-          <ul className="flex pt-6 pb-6">
+          <ul className="flex h-16 border-b-4 border-bc">
+            <Text className="text-tc text-5xl mr-3 ml-2">Q;Q;</Text>
             {navigation.map((p) => {
               return (
                 <>
-                  <div className="flex mr-3">
+                  <div className="flex">
                     <li>
                       <NavLink
                         className={({ isActive }) =>
@@ -55,7 +51,7 @@ class Routing extends Component {
                             isActive
                               ? "bg-bc text-tcb"
                               : "text-tc hover:bg-bc hover:text-tcb bg-bcd",
-                            "rounded-md px-4 py-2 text-lg font-medium",
+                            "flex py-4 px-10 text-xl",
                           )
                         }
                         to={p.link}

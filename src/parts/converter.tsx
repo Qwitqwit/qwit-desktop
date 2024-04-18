@@ -8,12 +8,15 @@ function Converter() {
   const [sourceFileName, setSourceFileName] = useState("");
   const [sourcePath, setSourcePath] = useState("");
   const [targetPath, setTargetPath] = useState("");
+  const [separator, setSeparator] = useState(";");
   const [res, setRes] = useState("");
 
   async function convert() {
-    await invoke("convert", { source: sourcePath, target: targetPath }).then(
-      (message) => setRes((message as string) ?? ""),
-    );
+    await invoke("convert", {
+      source: sourcePath,
+      target: targetPath,
+      sep: separator,
+    }).then((message) => setRes((message as string) ?? ""));
   }
 
   async function openDialog(): Promise<void> {
@@ -49,21 +52,48 @@ function Converter() {
   }
 
   return (
-    <div className="container">
-      <div className="columns-2 h-36 flex">
-        <div className="columns-2 p-1">
-          <Text className="text-tc">{sourceFileName}</Text>
+    <div className="container w-max mt-2">
+      <div className="columns-3">
+        <Text className="text-tc">Separator: {separator}</Text>
+        <Text className="text-tc">Source: {sourceFileName}</Text>
+        <Text className="text-tc">Target: {targetPath}</Text>
+      </div>
+
+      <div className="columns-3 p-1  border-b-2 border-b-bc">
+        <div className="columns-4 p-1">
+          <Button
+            onClick={() => {
+              setSeparator(";");
+            }}
+          >
+            ;
+          </Button>
+          <Button
+            onClick={() => {
+              setSeparator(",");
+            }}
+          >
+            ,
+          </Button>
+          <Button
+            onClick={() => {
+              setSeparator(":");
+            }}
+          >
+            :
+          </Button>
+        </div>
+        <div className="p-1">
           <Button onClick={openDialog}>Choose source path</Button>
         </div>
-
-        <div className="columns-2 p-1">
-          <Text className="text-tc">{targetPath}</Text>
+        <div className="p-1">
           <Button onClick={saveDialog}>Choose target path</Button>
         </div>
       </div>
-
-      <Text className="text-tc">Result: {res}</Text>
-      <Button onClick={convert}>Convert</Button>
+      <div className="p-1 mt-8">
+        <Text className="text-tc">Result: {res}</Text>
+        <Button onClick={convert}>Convert</Button>
+      </div>
     </div>
   );
 }
