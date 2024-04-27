@@ -1,5 +1,3 @@
-import { Text } from "../components/text.tsx";
-import { Button } from "../components/button.tsx";
 import { useState } from "react";
 import { open, save } from "@tauri-apps/plugin-dialog";
 import { invoke } from "@tauri-apps/api/core";
@@ -54,45 +52,45 @@ function Converter() {
   return (
     <div className="container w-max mt-2">
       <div className="columns-3">
-        <Text className="text-tc">Separator: {separator}</Text>
-        <Text className="text-tc">Source: {sourceFileName}</Text>
-        <Text className="text-tc">Target: {targetPath}</Text>
+        <p className="">Separator: {separator}</p>
+        <p className="">Source: {sourceFileName}</p>
+        <p className="">Target: {targetPath}</p>
       </div>
 
-      <div className="columns-3 p-1  border-b-2 border-b-bc">
-        <div className="columns-4 p-1">
-          <Button
+      <div className="columns-3 p-1  border-b-2">
+        <div className="columns-3 p-1">
+          <button className="btn btn-primary"
             onClick={() => {
               setSeparator(";");
             }}
           >
             ;
-          </Button>
-          <Button
+          </button>
+          <button className="btn btn-primary"
             onClick={() => {
               setSeparator(",");
             }}
           >
             ,
-          </Button>
-          <Button
+          </button>
+          <button className="btn btn-primary"
             onClick={() => {
               setSeparator(":");
             }}
           >
             :
-          </Button>
+          </button>
         </div>
         <div className="p-1">
-          <Button onClick={openDialog}>Choose source path</Button>
+          <button className="btn btn-primary" onClick={openDialog}>Choose source path</button>
         </div>
         <div className="p-1">
-          <Button onClick={saveDialog}>Choose target path</Button>
+          <button  className="btn btn-primary" onClick={saveDialog}>Choose target path</button>
         </div>
       </div>
       <div className="p-1 mt-8">
-        <Text className="text-tc">Result: {res}</Text>
-        <Button onClick={convert}>Convert</Button>
+        <p className="p-tc">Result: {res}</p>
+        <button className="btn btn-primary" onClick={convert}>Convert</button>
       </div>
     </div>
   );

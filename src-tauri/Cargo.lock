@@ -3058,9 +3058,9 @@ dependencies = [
 
 [[package]]
 name = "qwitlib"
-version = "0.3.2"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b3a37bc89c38cf16c55b124a6c3cdac87c7c3c80a0cb62eb78ecb3c5b1dea46"
+checksum = "52a340a28443f9ee87087729903d71770f6bbd529ef2aa7d707781e52f6fd721"
 dependencies = [
  "calamine",
  "chrono",

@@ -9,7 +9,6 @@ import Settings from "../parts/settings.tsx";
 import "./../index.css";
 import { Component, ReactElement } from "react";
 import Converter from "../parts/converter.tsx";
-import { Text } from "../components/text.tsx";
 
 interface Part {
   component: ReactElement<unknown, string>;
@@ -38,8 +37,8 @@ class Routing extends Component {
     return (
       <Router>
         <div className="">
-          <ul className="flex h-16 border-b-4 border-bc">
-            <Text className="text-tc text-5xl mr-3 ml-2">Q;Q;</Text>
+          <ul className="flex h-16 border-b-4">
+            <p className="text-5xl mr-3 ml-2">Q;Q;</p>
             {navigation.map((p) => {
               return (
                 <>
@@ -49,7 +48,7 @@ class Routing extends Component {
                         className={({ isActive }) =>
                           classNames(
                             isActive
-                              ? "bg-bc text-tcb"
+                              ? "text-tcb"
                               : "text-tc hover:bg-bc hover:text-tcb bg-bcd",
                             "flex py-4 px-10 text-xl",
                           )
@@ -64,6 +63,7 @@ class Routing extends Component {
               );
             })}
           </ul>
+
           <Routes>
             <Route path="/" element={<RedirectToHome />}></Route>
             {navigation.map((p) => {

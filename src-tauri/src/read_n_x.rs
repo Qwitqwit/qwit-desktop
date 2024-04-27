@@ -14,11 +14,17 @@ pub fn read(source: &PathBuf, target: &PathBuf, sep: &str) -> Result<String, Str
     let mut xl = open_workbook_auto(&sce).unwrap();
 
     let target_path = PathBuf::from(target).with_extension("csv");
-    let _target_file = OpenOptions::new()
+    let res = OpenOptions::new()
         .write(true)
         .create(true)
-        .open(target_path.clone())
-        .unwrap();
+        .open(target_path.clone());
+
+    match res {
+        Ok(_) => {}
+        Err(_err) => {
+            return Err(format!("Could not open {}", target.to_str().unwrap()), )
+        }
+    }
 
     let worksheets = xl.worksheets();
 
