@@ -1,8 +1,6 @@
 import "./index.css";
 import Routing from "./root/routing.tsx";
 
-
-
 function App() {
   return (
     <div className="h-screen w-screen">

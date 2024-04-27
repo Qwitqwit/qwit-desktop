@@ -21,9 +21,7 @@ pub fn read(source: &PathBuf, target: &PathBuf, sep: &str) -> Result<String, Str
 
     match res {
         Ok(_) => {}
-        Err(_err) => {
-            return Err(format!("Could not open {}", target.to_str().unwrap()), )
-        }
+        Err(_err) => return Err(format!("Could not open {}", target.to_str().unwrap())),
     }
 
     let worksheets = xl.worksheets();

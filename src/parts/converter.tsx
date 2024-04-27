@@ -59,21 +59,24 @@ function Converter() {
 
       <div className="columns-3 p-1  border-b-2">
         <div className="columns-3 p-1">
-          <button className="btn btn-primary"
+          <button
+            className="btn btn-primary"
             onClick={() => {
               setSeparator(";");
             }}
           >
             ;
           </button>
-          <button className="btn btn-primary"
+          <button
+            className="btn btn-primary"
             onClick={() => {
               setSeparator(",");
             }}
           >
             ,
           </button>
-          <button className="btn btn-primary"
+          <button
+            className="btn btn-primary"
             onClick={() => {
               setSeparator(":");
             }}
@@ -82,15 +85,21 @@ function Converter() {
           </button>
         </div>
         <div className="p-1">
-          <button className="btn btn-primary" onClick={openDialog}>Choose source path</button>
+          <button className="btn btn-primary" onClick={openDialog}>
+            Choose source path
+          </button>
         </div>
         <div className="p-1">
-          <button  className="btn btn-primary" onClick={saveDialog}>Choose target path</button>
+          <button className="btn btn-primary" onClick={saveDialog}>
+            Choose target path
+          </button>
         </div>
       </div>
       <div className="p-1 mt-8">
         <p className="p-tc">Result: {res}</p>
-        <button className="btn btn-primary" onClick={convert}>Convert</button>
+        <button className="btn btn-primary" onClick={convert}>
+          Convert
+        </button>
       </div>
     </div>
   );
