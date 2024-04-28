@@ -65,7 +65,7 @@ class Routing extends Component {
           </ul>
 
           <Routes>
-            <Route path="/" element={<RedirectToHome />}></Route>
+            <Route path="/" element={<RedirectTo />}></Route>
             {navigation.map((p) => {
               return (
                 <>
@@ -82,7 +82,7 @@ class Routing extends Component {
 
 export default Routing;
 
-function RedirectToHome() {
-  redirect("/home");
+function RedirectTo() {
+  redirect("/converter");
   return null;
 }

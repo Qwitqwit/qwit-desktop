@@ -9,6 +9,7 @@ function Settings() {
         role="tab"
         className="tab"
         aria-label="Appearance"
+        checked
       />
       <div role="tabpanel" className="tab-content p-10">
         <ThemeChooser></ThemeChooser>

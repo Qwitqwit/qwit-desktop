@@ -1,3 +1,6 @@
+import { themeKey } from "../utils/utils.ts";
+import { useLocalStorage } from "usehooks-ts";
+
 const themes: string[] = [
   "dark",
   "cupcake",
@@ -13,6 +16,7 @@ const themes: string[] = [
 ];
 
 function ThemeChooser() {
+  const [, setTheme] = useLocalStorage(themeKey, "dark");
   return (
     <div className="dropdown mb-72 w-28">
       <div tabIndex={0} role="button" className="btn m-1">
@@ -40,6 +44,9 @@ function ThemeChooser() {
                 className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                 aria-label={theme}
                 value={theme}
+                onChange={(va) => {
+                  setTheme(va.target.value);
+                }}
               />
             </li>
           );
