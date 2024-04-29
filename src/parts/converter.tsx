@@ -51,61 +51,63 @@ function Converter() {
 
   return (
     <div className="w-max mt-2">
-      <div className="columns-3 p-1  border-b-2 flex">
+      <div className="columns-3 p-1 border-b-2 flex">
         <div className="p-1 mr-8">
           <p className="">Separator: {separator}</p>
+
           <div className="form-control">
             <label className="label cursor-pointer">
               <span className="label-text mr-1">Semicolon</span>
               <input
                 type="radio"
-                name="radio-10"
+                name="radio-1"
                 className="radio checked:bg-red-500"
+                checked={separator == ";"}
                 onClick={() => {
                   setSeparator(";");
                 }}
-              >
-                {" "}
-              </input>
+              ></input>
             </label>
           </div>
+
           <div className="form-control">
             <label className="label cursor-pointer">
               <span className="label-text mr-1">Comma</span>
               <input
                 type="radio"
-                name="radio-10"
+                name="radio-1"
                 className="radio checked:bg-blue-500"
+                checked={separator == ","}
                 onClick={() => {
                   setSeparator(",");
                 }}
-              >
-                {" "}
-              </input>
+              ></input>
             </label>
           </div>
+
           <div className="form-control">
             <label className="label cursor-pointer">
               <span className="label-text">Colon</span>
               <input
                 type="radio"
-                name="radio-10"
+                name="radio-1"
                 className="radio checked:bg-green-500"
+                checked={separator == ":"}
                 onClick={() => {
                   setSeparator(":");
                 }}
-              >
-                {" "}
-              </input>
+              ></input>
             </label>
           </div>
         </div>
+
         <div className="p-1 mr-8">
           <p className="">Source: {sourceFileName}</p>
           <button className="btn btn-primary" onClick={openDialog}>
             Choose source path
           </button>
         </div>
+
         <div className="p-1 mr-8">
           <p className="">Target: {targetPath}</p>
           <button className="btn btn-primary" onClick={saveDialog}>
@@ -113,6 +115,7 @@ function Converter() {
           </button>
         </div>
       </div>
+
       <div className="p-1 mt-8">
         <p className="p-tc">Result: {res}</p>
         <button className="btn btn-accent" onClick={convert}>

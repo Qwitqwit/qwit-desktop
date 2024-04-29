@@ -17,63 +17,56 @@ interface Part {
 }
 const navigation: Part[] = [
   {
-    component: <Converter />,
+    component: <Converter key="converter" />,
     link: "/converter",
     title: "Converter",
   },
   {
-    component: <Settings />,
+    component: <Settings key="settings" />,
     link: "/settings",
     title: "Settings",
   },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 class Routing extends Component {
   render() {
     return (
       <Router>
         <div className="">
-          <ul className="flex h-16 border-b-4">
-            <p className="text-5xl mr-3 ml-2">Q;Q;</p>
-            {navigation.map((p) => {
-              return (
-                <>
-                  <div className="flex">
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          classNames(
-                            isActive
-                              ? "text-tcb"
-                              : "text-tc hover:bg-bc hover:text-tcb bg-bcd",
-                            "flex py-4 px-10 text-xl",
-                          )
-                        }
-                        to={p.link}
-                      >
-                        {p.title}
-                      </NavLink>
-                    </li>
-                  </div>
-                </>
-              );
-            })}
-          </ul>
+          <div className="navbar shadow-xl">
+            <div className="navbar-start">
+              <a className="btn btn-ghost text-3xl">qwit</a>
+              <ul className="menu menu-horizontal">
+                {navigation.map((p) => {
+                  return (
+                    <>
+                      <li>
+                        <NavLink className="text-lg" type="link" to={p.link}>
+                          {p.title}
+                        </NavLink>
+                      </li>
+                    </>
+                  );
+                })}
+              </ul>
+            </div>
 
-          <Routes>
-            <Route path="/" element={<RedirectTo />}></Route>
-            {navigation.map((p) => {
-              return (
-                <>
-                  <Route path={p.link} element={p.component}></Route>
-                </>
-              );
-            })}
-          </Routes>
+            <div className="navbar-center hidden lg:flex"></div>
+            <div className="navbar-end"></div>
+          </div>
+
+          <div className="mt-2">
+            <Routes>
+              <Route path="/" element={<RedirectTo />}></Route>
+              {navigation.map((p) => {
+                return (
+                  <>
+                    <Route path={p.link} element={p.component}></Route>
+                  </>
+                );
+              })}
+            </Routes>
+          </div>
         </div>
       </Router>
     );
