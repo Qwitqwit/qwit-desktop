@@ -10,7 +10,7 @@ export default function AppRoutes() {
   });
 
   if (!indexAppPart) {
-    return NotExpectedPage;
+    return <NotExpectedPage />;
   }
 
   return (
