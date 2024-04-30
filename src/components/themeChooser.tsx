@@ -37,7 +37,7 @@ function ThemeChooser() {
       >
         {themes.map((theme) => {
           return (
-            <li>
+            <li key={theme + "list key"}>
               <input
                 type="radio"
                 name="theme-dropdown"
