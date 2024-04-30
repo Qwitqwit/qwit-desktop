@@ -33,7 +33,7 @@ class Routing extends Component {
     return (
       <Router>
         <div className="">
-          <div className="navbar shadow-xl">
+          <div className="navbar shadow-xl animate-in slide-in-from-top duration-300">
             <div className="navbar-start">
               <a className="btn btn-ghost text-3xl">qwit</a>
               <ul className="menu menu-horizontal">
