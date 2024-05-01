@@ -4,10 +4,10 @@ export default function PathsChooser(
 ) {
   return (
     <>
-      <button className="btn btn-primary  pb-2" onClick={openDialog}>
+      <button className="btn btn-primary mb-1" onClick={openDialog}>
         Choose source path
       </button>
-      <button className="btn btn-primary pb-2" onClick={saveDialog}>
+      <button className="btn btn-primary" onClick={saveDialog}>
         Choose target path
       </button>
     </>

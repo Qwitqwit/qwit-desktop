@@ -5,7 +5,7 @@ export default function SeparatorChooser(
     <div className="p-1 mr-8">
       <div className="form-control">
         <label className="label cursor-pointer">
-          <span className="label-text mr-1">Semicolon</span>
+          <span className="label-text mr-2">Semicolon</span>
           <input
             type="radio"
             name="radio-1"
@@ -20,7 +20,7 @@ export default function SeparatorChooser(
 
       <div className="form-control">
         <label className="label cursor-pointer">
-          <span className="label-text mr-1">Comma</span>
+          <span className="label-text mr-2">Comma</span>
           <input
             type="radio"
             name="radio-1"
@@ -34,7 +34,7 @@ export default function SeparatorChooser(
 
       <div className="form-control">
         <label className="label cursor-pointer">
-          <span className="label-text">Colon</span>
+          <span className="label-text mr-2">Colon</span>
           <input
             type="radio"
             name="radio-1"

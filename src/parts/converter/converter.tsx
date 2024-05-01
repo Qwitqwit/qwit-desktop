@@ -52,27 +52,31 @@ function Converter() {
   }
 
   return (
-    <div className="w-max mt-2">
-      <ul className="menu bg-base-200 w-56 rounded-box">
-        <details>
-          <summary className="text-lg cursor-pointer">Separator</summary>
-          <li>{SeparatorChooser(setSeparator)}</li>
-        </details>
+    <div className="w-max mt-2 flex">
+      <div className="w-72 mt-2 h-screen">
+        <ul className="menu bg-base-200 w-56 rounded-box">
+          <details className="w-52">
+            <summary className="text-lg cursor-pointer">Separator</summary>
+            <li>{SeparatorChooser(setSeparator)}</li>
+          </details>
 
-        <details>
-          <summary className="text-lg cursor-pointer">Paths</summary>
-          <li>{PathsChooser(openDialog, saveDialog)}</li>
-        </details>
-      </ul>
+          <details className="w-52">
+            <summary className="text-lg cursor-pointer">Paths</summary>
+            <li>{PathsChooser(openDialog, saveDialog)}</li>
+          </details>
+        </ul>
 
-      <div className="p-1 mt-8">
-        <p className="p-tc pb-1">Source: {sourceFileName}</p>
-        <p className="p-tc pb-1">Target: {targetPath}</p>
-        <p className="p-tc pb-1">Result: {res}</p>
-        <button className="btn btn-accent pb-1" onClick={convert}>
-          Convert
-        </button>
+        <div className="p-1 mt-8">
+          <p className="p-tc pb-1">Source: {sourceFileName}</p>
+          <p className="p-tc pb-1">Target: {targetPath}</p>
+          <p className="p-tc pb-1">Result: {res}</p>
+          <button className="btn btn-accent pb-1" onClick={convert}>
+            Convert
+          </button>
+        </div>
       </div>
+
+      <div className="divider divider-horizontal"></div>
     </div>
   );
 }
