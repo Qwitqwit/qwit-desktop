@@ -1,4 +1,4 @@
-import Converter from "../parts/converter.tsx";
+import Converter from "../parts/converter/converter.tsx";
 import Settings from "../parts/settings.tsx";
 
 import { ReactElement } from "react";
