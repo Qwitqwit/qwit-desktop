@@ -3,6 +3,7 @@ import { open, save } from "@tauri-apps/plugin-dialog";
 import { invoke } from "@tauri-apps/api/core";
 import SeparatorChooser from "./separatorChooser.tsx";
 import PathsChooser from "./pathsChooser.tsx";
+import PreviewTable from "./previewTable.tsx";
 
 function Converter() {
   const [sourceFileName, setSourceFileName] = useState("");
@@ -53,8 +54,8 @@ function Converter() {
 
   return (
     <div className="w-max mt-2 flex">
-      <div className="w-72 mt-2 h-screen">
-        <ul className="menu bg-base-200 w-56 rounded-box">
+      <div className="w-72 mt-2">
+        <ul className="menu w-56 rounded-box">
           <details className="w-52">
             <summary className="text-lg cursor-pointer">Separator</summary>
             <li>{SeparatorChooser(setSeparator)}</li>
@@ -77,6 +78,8 @@ function Converter() {
       </div>
 
       <div className="divider divider-horizontal"></div>
+
+      {PreviewTable()}
     </div>
   );
 }

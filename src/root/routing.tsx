@@ -6,7 +6,7 @@ import AppRoutes from "./routes.tsx";
 function Routing() {
   return (
     <Router>
-      <div className="" key="app-root">
+      <div key="app-root">
         <Navbar></Navbar>
         <AppRoutes></AppRoutes>
       </div>
