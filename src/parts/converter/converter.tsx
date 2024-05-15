@@ -3,13 +3,15 @@ import { open, save } from "@tauri-apps/plugin-dialog";
 import { invoke } from "@tauri-apps/api/core";
 import SeparatorChooser from "./separatorChooser.tsx";
 import PathsChooser from "./pathsChooser.tsx";
-import PreviewTable from "./previewTable.tsx";
+import HeaderChooser from "../csvTable/headerChooser.tsx";
+import CsvTable from "../csvTable/csvTable.tsx";
 
 function Converter() {
   const [sourceFileName, setSourceFileName] = useState("");
   const [sourcePath, setSourcePath] = useState("");
   const [targetPath, setTargetPath] = useState("");
   const [separator, setSeparator] = useState(";");
+  const [headerIndex, setHeaderIndex] = useState(-1);
   const [res, setRes] = useState("");
 
   async function convert() {
@@ -67,7 +69,12 @@ function Converter() {
           </details>
         </ul>
 
-        <div className="p-1 mt-8">
+        <div className="p-1 mt-1">
+          <p className="p-tc pb-1">Header index</p>
+          <HeaderChooser onSelect={setHeaderIndex}></HeaderChooser>
+        </div>
+
+        <div className="p-1 mt-3">
           <p className="p-tc pb-1">Source: {sourceFileName}</p>
           <p className="p-tc pb-1">Target: {targetPath}</p>
           <p className="p-tc pb-1">Result: {res}</p>
@@ -79,7 +86,11 @@ function Converter() {
 
       <div className="divider divider-horizontal"></div>
 
-      {PreviewTable()}
+      <CsvTable
+        targetPath={targetPath}
+        separator={separator}
+        headerIndex={headerIndex}
+      />
     </div>
   );
 }

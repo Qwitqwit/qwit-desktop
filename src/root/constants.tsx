@@ -2,6 +2,7 @@ import Converter from "../parts/converter/converter.tsx";
 import Settings from "../parts/settings.tsx";
 
 import { ReactElement } from "react";
+import Reader from "../parts/reader/reader.tsx";
 
 export interface AppPart {
   component: ReactElement<unknown, string>;
@@ -16,6 +17,11 @@ export const navigation: AppPart[] = [
     link: "/converter",
     title: "Converter",
     index: true,
+  },
+  {
+    component: <Reader key="reader" />,
+    link: "/reader",
+    title: "Reader",
   },
   {
     component: <Settings key="settings" />,
